@@ -1,0 +1,164 @@
+@media only screen and (min-width: 375px) {
+    .card-vote-image {
+        min-height: 300px;
+    }
+    .fa-icon-up-status, 
+    .fa-icon-down-status, 
+    .btn-vote-green, 
+    .btn-vote-orange {
+        font-size: 25px;
+    }
+    .name-person { 
+        font-size: 31px;
+    }
+    .description-person {
+        font-size: 20px;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .card-vote-image {
+        min-height: 300px;
+    }
+    .fa-icon-up-status, 
+    .fa-icon-down-status, 
+    .btn-vote-green, 
+    .btn-vote-orange {
+        font-size: 25px;
+    }
+    .name-person { 
+        font-size: 31px;
+    }
+    .description-person {
+        font-size: 20px;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-vote-image {
+        min-height: 300px;
+    }
+    .fa-icon-up-status, 
+    .fa-icon-down-status, 
+    .btn-vote-green, 
+    .btn-vote-orange {
+        font-size: 25px;
+    }
+    .name-person { 
+        font-size: 31px;
+    }
+    .description-person {
+        font-size: 25px;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-vote-image {
+        min-height: 562px;
+    }
+    .fa-icon-up-status, 
+    .fa-icon-down-status, 
+    .btn-vote-green, 
+    .btn-vote-orange {
+        font-size: 30px;
+    }
+    .name-person { 
+        font-size: 39px;
+    }
+    .description-person {
+        font-size: 27px;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-vote-image {
+        min-height: 500px;
+    }
+    .fa-icon-up-status, 
+    .fa-icon-down-status, 
+    .btn-vote-green, 
+    .btn-vote-orange {
+        font-size: 30px;
+    }
+    .name-person { 
+        font-size: 39px;
+    }
+    .description-person {
+        font-size: 30px;
+    }
+}
+
+.fa-icon-up, .fa-icon-down {
+    font-size: 30px;
+}
+
+.card-vote-image {
+    background-size: cover;
+}
+
+.card-vote-description
+{
+    margin-top: 50%;
+}
+
+.name-person {
+    margin-bottom: 0px;
+    line-height: normal;
+}
+
+.btn.btn-vote-green,
+.vote-green-transparent {
+    color: white;
+    background-color:rgba(28, 187, 180, 0.8);
+    opacity: 0.8;
+}
+
+.btn-vote-orange,
+.vote-orange-transparent {
+    color: white;
+    background-color:rgba(255, 172, 29, 0.8);
+    opacity: 0.8;
+}
+
+.btn-vote {
+    color: white;
+    background-color:rgba(0, 0, 0, 0.2);
+    border-color: #fff;
+}
+
+.btn.btn-vote.active.focus,
+.btn.btn-vote.active:focus,
+.btn.btn-vote.active:hover,
+.btn.btn-vote:active.focus,
+.btn.btn-vote:active:focus,
+.btn.btn-vote:active:hover {
+    background-color:rgba(179, 179, 179, 0.534);
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.btn.btn-vote-green.active.focus,
+.btn.btn-vote-green.active:focus,
+.btn.btn-vote-green.active:hover,
+.btn.btn-vote-green:active.focus,
+.btn.btn-vote-green:active:focus,
+.btn.btn-vote-green:active:hover {
+    background-color:rgba(28, 187, 179, 1);
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.btn.btn-vote-orange.active.focus,
+.btn.btn-vote-orange.active:focus,
+.btn.btn-vote-orange.active:hover,
+.btn.btn-vote-orange:active.focus,
+.btn.btn-vote-orange:active:focus,
+.btn.btn-vote-orange:active:hover {
+    background-color:rgba(255, 172, 29, 1);
+    border-color: #fff;
+    box-shadow: none;
+}

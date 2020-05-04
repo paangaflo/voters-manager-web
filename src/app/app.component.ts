@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faThumbsUp, faThumbsDown} from '@fortawesome/free-solid-svg-icons';
+import { faWikipediaW } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'voters-manager-web';
+  faThumbsUp = faThumbsUp;
+  faThumbsDown = faThumbsDown;
+  faWikipediaW = faWikipediaW
 }

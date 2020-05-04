@@ -1,0 +1,58 @@
+<div class="text-left pt-3 mt-3 mb-3 card-vote-image" [style.background-image]="getBackground(vote.image)">
+    <div class="card-vote-description">
+        <div class="row m-0">
+            <div class="col-2 p-0">
+                <div *ngIf="favorability; else elseBlockFavorability" class="vote-green-transparent text-center">
+                    <fa-icon class="fa-icon-up-status" [icon]="faThumbsUp"></fa-icon>
+                </div>
+                <ng-template #elseBlockFavorability>
+                    <div class="vote-orange-transparent text-center">
+                        <fa-icon class="fa-icon-down-status" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
+                    </div>
+                </ng-template>
+            </div>
+            <div class="col-10">
+                <p class="name-person f-w-4">{{vote.person}}</p>
+                <p class="f-w-3"><strong>{{vote.time}}</strong><span> in {{vote.category}}</span></p>
+                <div *ngIf="status_message; else elseBlockStatus" >
+                    <p class="f-w-1 description-person">Thank you for voting!</p>
+                    <button type="button" class="btn btn-vote ml-5 mb-3" (click)="onAgain()">Vote again</button>
+                </div>
+                <ng-template #elseBlockStatus>
+                    <p class="f-w-1 description-person">{{vote.description}}</p>
+                    <div class="btn-group mb-3" role="group">
+                        <button type="button" class="btn btn-vote-green" [ngClass]="{'active': vote_select==true}" (click)="onChangeVote(true)">
+                            <fa-icon class="fa-icon-up-status" [icon]="faThumbsUp"></fa-icon>
+                        </button>
+                        <button type="button" class="btn btn-vote-orange" [ngClass]="{'active': vote_select==false}" (click)="onChangeVote(false)">
+                            <fa-icon class="fa-icon-down-status" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-vote ml-5 mb-3" (click)="onVoting()">Vote now</button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-2 mx-0 ext-center vote-green-transparent">
+            <fa-icon class="fa-icon-up my-3" [icon]="faThumbsUp"></fa-icon>
+        </div>
+        <div class="col-8">
+            <div class="row h-100">
+                <div class="{{class_positive}} text-left vote-green-transparent">
+                    <div class="h-100">
+                        <p class="f-w-3">{{avg_positive | number:'2.1-2'}}</p>
+                    </div>
+                </div>
+                <div class="{{class_negative}} text-right vote-orange-transparent">
+                    <div class="h-100">
+                        <p class="f-w-3">{{avg_negative | number:'2.1-2'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 mx-0 text-center vote-orange-transparent">
+            <fa-icon class="fa-icon-down my-3" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
+        </div>
+    </div>
+</div>
