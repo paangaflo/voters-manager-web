@@ -1,6 +1,61 @@
+
+<ngb-alert *ngFor="let alert of alerts" class="text-dark" [type]="alert.type" (close)="close(alert)">
+  <div class="row h-100">
+    <div class="col-12 my-auto text-center col-sm-6 col-md-5 col-lg-4 col-xl-3">
+      <p class="f-w-3 mb-0">{{ alert.title }}</p>
+      <h1 class="f-w-7">{{ alert.sub_title }}</h1>
+    </div>
+    <div class="col-12 my-auto col-sm-6 col-md-7 col-lg-8 col-xl-9">
+      <p class="f-w-3 mt-2 text-justify">{{ alert.message }}</p>
+    </div>
+  </div>
+</ngb-alert>
 <h1 class="f-w-4 text-dark m-1 m-sm-5">Votes</h1>
 <div class="row">
   <div class="col-12 col-sm-6" *ngFor="let vote of votes">
     <app-vote-detail [vote]="vote"></app-vote-detail>
+  </div>
+</div>
+<div class="text-dark bg-submit-people mt-3">
+  <div class="row h-100 bg-submit-transparent">
+    <div class="col-12 my-auto col-sm-6 col-md-8 col-lg-9">
+      <p class="f-w-3 my-auto">Is there anyone else you would want us to ass?</p>
+    </div>
+    <div class="col-12 pt-3 pt-sm-0 my-auto text-center col-sm-6 col-md-4 col-lg-3">
+      <button type="button" class="btn btn-vote">Submit a Name</button>
+    </div>
+  </div>
+</div>
+<div class="text-dark horizontal-line my-3"></div>
+<div class="row h-100">
+  <div class="col-12 col-sm-7 my-auto">
+    <ul class="nav d-flex justify-content-md-start justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link text-dark f-w-3" href="">Term and Conditions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark f-w-3" href="#">Privacy Policy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark f-w-3" href="#">Contact US</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-12 col-sm-5">
+    <ul class="nav d-flex justify-content-md-end justify-content-center">
+      <li class="nav-item my-auto">
+        <a class="nav-link text-dark f-w-3" href="#">Folows Us</a>
+      </li>
+      <li class="nav-item my-auto">
+        <a class="nav-link text-dark f-w-3" target="_blank" href="https://www.facebook.com/Zemoga?fref=ts">
+          <fa-icon class="text-dark f-w-3" [icon]="faFacebookSquare"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-item my-auto">
+        <a class="nav-link text-dark f-w-3" target="_blank" href="https://twitter.com/Zemoga">
+          <fa-icon class="text-dark f-w-3" [icon]="faTwitterSquare"></fa-icon>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 320px) {
     .card-vote-image {
         min-height: 300px;
     }
@@ -14,6 +14,14 @@
     .description-person {
         font-size: 20px;
         line-height: normal;
+    }
+    div.vote-green-transparent > div > div > div > p > fa-icon,
+    div.vote-orange-transparent > div > div > p > fa-icon{
+        font-size: 25px;
+    }
+    div.vote-green-transparent > div > div > div > p > span,
+    div.vote-orange-transparent > div > div > p > span {
+        font-size: 15px;
     }
 }
 
@@ -34,6 +42,15 @@
         font-size: 20px;
         line-height: normal;
     }
+    div.vote-green-transparent > div > div > div > p > fa-icon,
+    div.vote-orange-transparent > div > div > p > fa-icon{
+        font-size: 25px;
+    }
+
+    div.vote-green-transparent > div > div > div > p > span,
+    div.vote-orange-transparent > div > div > p > span {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,6 +69,15 @@
     .description-person {
         font-size: 25px;
         line-height: normal;
+    }
+    div.vote-green-transparent > div > div > div > p > fa-icon,
+    div.vote-orange-transparent > div > div > p > fa-icon{
+        font-size: 30px;
+    }
+
+    div.vote-green-transparent > div > div > div > p > span,
+    div.vote-orange-transparent > div > div > p > span {
+        font-size: 22px;
     }
 }
 
@@ -72,6 +98,14 @@
         font-size: 27px;
         line-height: normal;
     }
+    div.vote-green-transparent > div > div > div > p > fa-icon,
+    div.vote-orange-transparent > div > div > p > fa-icon{
+        font-size: 30px;
+    }
+    div.vote-green-transparent > div > div > div > p > span,
+    div.vote-orange-transparent > div > div > p > span {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -90,14 +124,20 @@
     .description-person {
         font-size: 30px;
     }
-}
-
-.fa-icon-up, .fa-icon-down {
-    font-size: 30px;
+    div.vote-green-transparent > div > div > div > p > fa-icon,
+    div.vote-orange-transparent > div > div > p > fa-icon{
+        font-size: 30px;
+    }
+    div.vote-green-transparent > div > div > div > p > span,
+    div.vote-orange-transparent > div > div > p > span {
+        font-size: 30px;
+    }
 }
 
 .card-vote-image {
+    background-color: transparent !important;
     background-size: cover;
+    z-index: 99;
 }
 
 .card-vote-description
@@ -117,11 +157,11 @@
     opacity: 0.8;
 }
 
-.btn-vote-orange,
+.btn.btn-vote-orange,
 .vote-orange-transparent {
     color: white;
-    background-color:rgba(255, 172, 29, 0.8);
-    opacity: 0.8;
+    background-color:rgba(255, 172, 29);
+    opacity: 1;
 }
 
 .btn-vote {

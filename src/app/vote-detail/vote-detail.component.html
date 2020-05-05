@@ -16,7 +16,7 @@
                 <p class="f-w-3"><strong>{{vote.time}}</strong><span> in {{vote.category}}</span></p>
                 <div *ngIf="status_message; else elseBlockStatus" >
                     <p class="f-w-1 description-person">Thank you for voting!</p>
-                    <button type="button" class="btn btn-vote ml-5 mb-3" (click)="onAgain()">Vote again</button>
+                    <button type="button" class="btn btn-vote mb-3" (click)="onAgain()">Vote again</button>
                 </div>
                 <ng-template #elseBlockStatus>
                     <p class="f-w-1 description-person">{{vote.description}}</p>
@@ -28,31 +28,31 @@
                             <fa-icon class="fa-icon-down-status" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
                         </button>
                     </div>
-                    <button type="button" class="btn btn-vote ml-5 mb-3" (click)="onVoting()">Vote now</button>
+                    <button type="button" class="btn btn-vote ml-3 mb-3" (click)="onVoting()">Vote now</button>
                 </ng-template>
             </div>
         </div>
-    </div>
-    <div class="row m-0">
-        <div class="col-2 mx-0 ext-center vote-green-transparent">
-            <fa-icon class="fa-icon-up my-3" [icon]="faThumbsUp"></fa-icon>
-        </div>
-        <div class="col-8">
-            <div class="row h-100">
-                <div class="{{class_positive}} text-left vote-green-transparent">
-                    <div class="h-100">
-                        <p class="f-w-3">{{avg_positive | number:'2.1-2'}}</p>
+        <div class="row m-0 h-100 vote-green-transparent">
+            <div class="{{class_positive}} my-auto">
+                <div class="row h-100">
+                    <div class="col-12 my-auto">
+                        <p class="f-w-4 my-auto text-left">
+                            <fa-icon class="my-auto fa-icon-up" [icon]="faThumbsUp"></fa-icon>
+                            <span class="f-w-4 my-auto ml-2">{{ avg_positive }} %</span>
+                        </p>
                     </div>
                 </div>
-                <div class="{{class_negative}} text-right vote-orange-transparent">
-                    <div class="h-100">
-                        <p class="f-w-3">{{avg_negative | number:'2.1-2'}}</p>
+            </div>
+            <div class="{{class_negative}} my-auto vote-orange-transparent">
+                <div class="row h-100">
+                    <div class="col-12 my-auto">
+                        <p class="f-w-4 my-auto text-right">
+                            <span class="f-w-4 my-auto mr-2">{{ avg_negative }} %</span>
+                            <fa-icon class="my-auto fa-icon-down" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-2 mx-0 text-center vote-orange-transparent">
-            <fa-icon class="fa-icon-down my-3" [icon]="faThumbsDown" flip="horizontal"></fa-icon>
-        </div>
-    </div>
+    </div>       
 </div>

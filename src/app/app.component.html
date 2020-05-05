@@ -1,24 +1,23 @@
-
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-light bg-transparent py-md-5">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent py-md-3" id="navbar" #navbar>
   <div class="container">
-    <h1 class="navbar-brand f-w-4">Rule of Trumb</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbar">
+    <h1 class="navbar-brand f-w-4" [routerLink]="'.'">Rule of Trumb</h1>
+    <button class="navbar-toggler" type="button" (click)="removeClassNavBar(navbar); isMenuCollapsed = !isMenuCollapsed;">
+      &#9776;
+    </button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link f-w-3 mr-5" href="/">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link f-w-3 mr-5" [routerLink]="'/'" (click)="isMenuCollapsed = true">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link f-w-3 mr-5" href="/past_trials">Past Trials</a>
+          <a class="nav-link f-w-3 mr-5" [routerLink]="'/past_trials'" (click)="isMenuCollapsed = true">Past Trials</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link f-w-3 mr-5" href="/how_it_works">How It Works</a>
+          <a class="nav-link f-w-3 mr-5" [routerLink]="'/how_it_works'" (click)="isMenuCollapsed = true">How It Works</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link f-w-3 mr-5" href="/login_singup">Log In / Sing Up</a>
+          <a class="nav-link f-w-3 mr-5" [routerLink]="'/login_singup'" (click)="isMenuCollapsed = true">Log In / Sing Up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link f-w-3 mr-5" href="#">
@@ -33,7 +32,7 @@
   </div>
 </nav>
 
-<!-- Full Page Image Header with Vertically Centered Content -->
+<!-- Full Page Image Header -->
 <header class="header-main">
   <div class="container h-90">
     <div class="row h-100 align-items-center">
@@ -60,16 +59,18 @@
     </div>
   </div>
   <div class="h-10">
-    <div class="row h-100 mr-0 ml-0">
-      <div class="col-4 h-100 text-right closign-transparent">
-        <p class="mt-3 mt-md-3 mt-lg-4 mt-xl-5 f-w-4 closing">CLOSING IN</p>
+    <div class="row h-100 mr-0 closign-transparent">
+      <div class="col-4 my-auto">
+        <p class="f-w-4 my-auto text-right">CLOSING IN</p>
       </div>
-      <div class="col-8 h-100 text-left days-transparent">
-        <div class="d-inline-block h-100 my-auto">
-          <span class="f-w-7 text-dark days">22</span>
-        </div>
-        <div class="d-inline-block ml-3">
-          <p class="f-w-4 text-dark">days</p>
+      <div class="col-8 text-left days-transparent">
+        <div class="row h-100">
+          <div class="col-12 my-auto">
+            <p class="my-auto">
+              <strong class="f-w-4 my-auto">22</strong>
+              <span class="f-w-3 my-auto"> days</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -80,13 +81,5 @@
 <section class="py-5">
   <div class="container">
     <router-outlet></router-outlet>
-  </div>
-</section>
-
-<!-- Page Footer -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="font-weight-light">Page Content</h2>
-    <p>Lorem ip</p>
   </div>
 </section>

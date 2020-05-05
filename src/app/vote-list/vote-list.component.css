@@ -1,0 +1,126 @@
+@media only screen and (min-width: 360px) {
+    .alert-custom div > p {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .bg-submit-transparent div > p {
+        font-size: 21px;
+    }
+    .bg-submit-transparent div > button {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .alert-custom div > p {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .bg-submit-transparent div > p {
+        font-size: 21px;
+    }
+    .bg-submit-transparent div > button {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .alert-custom div > p {
+        font-size: 15px;
+        line-height: normal;
+    }
+    .bg-submit-transparent div > p {
+        font-size: 21px;
+    }
+    .bg-submit-transparent div > button {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .alert-custom div > p {
+        font-size: 16px;
+        line-height: normal;
+    }
+    .bg-submit-transparent div > p {
+        font-size: 27px;
+    }
+    .bg-submit-transparent div > button {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .alert-custom div > p {
+        font-size: 19px;
+        line-height: normal;
+    }
+    .bg-submit-transparent div > p {
+        font-size: 34px;
+    }
+    .bg-submit-transparent div > button {
+        font-size: 19px;
+    }
+}
+
+.alert-custom {
+    background-color: rgb(235, 235, 235);
+    border-color: unset;
+    border: unset;
+    border-radius: unset;
+}
+
+.bg-submit-people {
+    border-color: unset;
+    border: unset;
+    border-radius: unset;
+    background-image: url('../../assets/images/people.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+}
+
+.bg-submit-transparent {
+    padding-right: 4rem;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    background-color: rgba(250, 250, 250, 0.7);
+    opacity: 1;
+}
+
+.btn-vote {
+    color: black;
+    background-color: transparent !important;
+    border-color: black;
+    border-radius: unset;
+    border: 3px solid;
+}
+
+.btn.btn-vote.active.focus,
+.btn.btn-vote.active:focus,
+.btn.btn-vote.active:hover,
+.btn.btn-vote:active.focus,
+.btn.btn-vote:active:focus,
+.btn.btn-vote:active:hover {
+    background-color:rgba(0, 0, 0, 0.2) !important;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.horizontal-line {
+    padding: 1em;
+    background-image:
+        radial-gradient(circle at 1px, #343a40 1px, rgba(255,255,255,0) 1px),
+        radial-gradient(circle, #343a40 1px, rgba(255,255,255,0) 1px),
+        radial-gradient(circle at 1px, #343a40 1px, rgba(255,255,255,0) 1px),
+        radial-gradient(circle, #343a40 1px, rgba(255,255,255,0) 1px);
+    background-position: top;
+    background-size: 8px 5px, 0px, 15px;
+    background-repeat: repeat-x, no-repeat, no-repeat, no-repeat;
+}
+
+ul > li > a > fa-icon {
+    font-size: 35px;
+}
