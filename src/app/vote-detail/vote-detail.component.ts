@@ -27,27 +27,27 @@ export class VoteDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.vote_select = true;
-    this.avg_positive = (100 / (this.vote.positive + this.vote.negative)) * this.vote.positive;
-    this.avg_negative = (100 / (this.vote.positive + this.vote.negative)) * this.vote.negative;
-    this.class_positive = 'col-' + Math.round(this.avg_positive / 8.34).toString();
-    this.class_negative = 'col-' + Math.round(this.avg_negative / 8.34).toString();
+    this.avg_positive = Math.round((100 / (this.vote.positive + this.vote.negative)) * this.vote.positive);
+    this.avg_negative = Math.round((100 / (this.vote.positive + this.vote.negative)) * this.vote.negative);
+    this.class_positive = 'col-' + (Math.round(this.avg_positive / 25) + 4).toString();
+    this.class_negative = 'col-' + (Math.round(this.avg_negative / 25) + 4).toString();
     this.favorability = this.avg_positive >= this.avg_negative  ? true : false;
   }
 
   getBackground(image) {
-    return this._sanitizer.bypassSecurityTrustStyle(`linear-gradient(to top, black, rgba(255, 0, 0, 0)), url(${image})`);  
+    return this._sanitizer.bypassSecurityTrustStyle(`linear-gradient(to top, black, rgba(255, 255, 255, -0.5)), url(${image})`);  
   }
 
-  onChangeVote(status) {
+  onChangeVote(status): void {
     this.vote_select = status;
   }
 
-  onAgain() {
+  onAgain(): void {
     this.status_message = false;
     this.ngOnInit();
   }
 
-  onVoting() {
+  onVoting(): void {
     if(this.vote_select){
       this.vote.positive++;
     }else{

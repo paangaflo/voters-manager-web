@@ -14,8 +14,4 @@ export class VoteService {
   getVotes() {
     return this.httpClient.get(this.API_URL + 'votes')
   }
-
-  getVote(voteId) {
-    return this.httpClient.get(`${this.API_URL + 'votes'}/${voteId}`)
-  }
 }
